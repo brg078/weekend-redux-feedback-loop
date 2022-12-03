@@ -1,12 +1,15 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #fadff1;
 }
 
-.App-header {
-  background-color: #033076;
+.App-header, .App-footer {
+  background-color: #4d5d53;
   min-height: 70px;
   padding: 20px;
-  color: white;
+  color: #fadff1;
   margin-bottom: 20px;
 }
 
@@ -20,4 +23,9 @@
 
 h4 {
   font-style: italic;
+}
+
+.meatAndPotatoes {
+  background-color: #fadff1;
+  color: #4d5d53;
 }
