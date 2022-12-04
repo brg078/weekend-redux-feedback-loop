@@ -5,11 +5,16 @@ import Takesurvey from '../Takesurvey/Takesurvey';
 import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import Review from '../Review/Review';
 import Understanding from '../Understanding/Understanding';
+import { useSelector } from 'react-redux';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 
 function App() {
+
+  const feedback = useSelector(store => store.feedbackReducer);
+
 
   return (
     
@@ -19,8 +24,8 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
 
-      {/* <div className='meatAndPotatoes'>
-        <p>meatAndPotatoes</p>
+      {/* <div className='feedback'>
+        <p>Feedback: {feedback}</p>
       </div> */}
 
       <Router>
@@ -40,7 +45,9 @@ function App() {
         <Route exact path="/comments">
             <Comments />
         </Route>
-      
+        <Route exact path="/review">
+            <Review />
+        </Route>
       
       </Router>
 
