@@ -2,11 +2,14 @@ import './Review.css';
 import { useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+
 
 function Review(){
 
     const feedback = useSelector(store => store.feedbackReducer);
     const history = useHistory();
+    const dispatch = useDispatch();
 
 
 
@@ -19,7 +22,11 @@ function Review(){
             data: feedback
             })
             .then((response) => { 
+                dispatch({
+                    type: 'DELETE_FEEDBACK'
+                });
                 alert('Thanks for your submission!')
+                
                 history.push('/');
             })
             .catch((error) => {

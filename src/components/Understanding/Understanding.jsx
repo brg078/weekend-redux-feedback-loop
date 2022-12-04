@@ -45,7 +45,7 @@ function Understanding () {
                     <input type="radio" name="scale" id="4" value="4" onChange={(event) => setScore(event.target.value)}></input>
                     <label for="4">Most Of It (4)</label>
                     <input type="radio" name="scale" id="5" value="5" onChange={(event) => setScore(event.target.value)}></input>
-                    <label for="2">Full Comprehension (5)</label>
+                    <label for="5">Full Comprehension (5)</label>
                 </p>
                 <button
                     className="nextbutton"

@@ -11,6 +11,8 @@ const feedbackReducer = (state = [], action) => {
     if (action.type ==='GET_FEEDBACK'){
         console.log('in GET_FEEDBACK', action.payload);
         return [...state, action.payload];
+    } else if (action.type ==='DELETE_FEEDBACK') {
+        return state = [];
     }
     console.log(state);
     return state;
